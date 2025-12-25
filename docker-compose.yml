@@ -1,0 +1,12 @@
+services:
+  compiler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    volumes:
+      - .:/home/user/workspace
+    working_dir: /home/user/workspace
+    tty: true
+    stdin_open: true
+    command: /bin/bash
